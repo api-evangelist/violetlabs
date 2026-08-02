@@ -1,0 +1,74 @@
+# VIOLET
+
+## User Guide
+
+- [Violet Documentation](https://docs.violetlabs.com/getting-started/violet-documentation.md)
+- [What is Violet?](https://docs.violetlabs.com/getting-started/what-is-violet.md)
+- [Platform Overview](https://docs.violetlabs.com/getting-started/platform-overview.md)
+- [Requirements](https://docs.violetlabs.com/getting-started/platform-overview/requirements.md)
+- [Parameters](https://docs.violetlabs.com/getting-started/platform-overview/parameters.md)
+- [Scripts](https://docs.violetlabs.com/getting-started/platform-overview/scripts.md)
+- [Connect your data](https://docs.violetlabs.com/integrations/connect-your-data.md)
+- [Integrations Dashboard](https://docs.violetlabs.com/integrations/integrations-dashboard.md)
+- [Terminology](https://docs.violetlabs.com/integrations/terminology.md)
+- [MCP](https://docs.violetlabs.com/ai/mcp.md)
+- [Chat](https://docs.violetlabs.com/ai/chat.md)
+- [Analytics](https://docs.violetlabs.com/features/analytics.md)
+- [API](https://docs.violetlabs.com/features/api.md)
+- [Generate an API key](https://docs.violetlabs.com/features/api/generate-an-api-key.md)
+- [Endpoints](https://docs.violetlabs.com/features/api/endpoints.md)
+- [Dashboards](https://docs.violetlabs.com/features/dashboards.md)
+- [Data Explorer](https://docs.violetlabs.com/features/data-explorer.md)
+- [Inventory Engine](https://docs.violetlabs.com/features/inventory-engine.md)
+- [Parameters](https://docs.violetlabs.com/features/parameters.md)
+- [Programs](https://docs.violetlabs.com/features/programs.md)
+- [Reports](https://docs.violetlabs.com/features/reports.md)
+- [Requirements](https://docs.violetlabs.com/features/requirements.md)
+- [Scripts](https://docs.violetlabs.com/features/scripts.md)
+- [SysML](https://docs.violetlabs.com/features/sysml.md)
+- [Workflows](https://docs.violetlabs.com/features/workflows.md)
+- [Data Sync Workflows](https://docs.violetlabs.com/features/workflows/data-sync-workflows.md)
+- [Observability](https://docs.violetlabs.com/features/workflows/observability.md)
+- [Change Orders \[Beta\]](https://docs.violetlabs.com/features/change-orders-beta.md)
+- [Schedules \[Beta\]](https://docs.violetlabs.com/features/schedules.md)
+- [Administrative](https://docs.violetlabs.com/resources/administrative.md)
+- [On-premises deployment](https://docs.violetlabs.com/resources/administrative/on-premises-deployment.md)
+- [Security & Compliance](https://docs.violetlabs.com/resources/security-and-compliance.md)
+- [ITAR/EAR Compliance](https://docs.violetlabs.com/resources/security-and-compliance/itar-ear-compliance.md)
+- [NIST/CMMC/FedRAMP Compliance](https://docs.violetlabs.com/resources/security-and-compliance/nist-cmmc-fedramp-compliance.md)
+- [SOC 2 Certification](https://docs.violetlabs.com/resources/security-and-compliance/soc-2-certification.md)
+- [MCP Security and Architecture](https://docs.violetlabs.com/resources/security-and-compliance/mcp-security-and-architecture.md)
+- [Videos and Tutorials](https://docs.violetlabs.com/resources/videos-and-tutorials.md)
+- [FAQ](https://docs.violetlabs.com/resources/faq.md)
+- [Pricing](https://docs.violetlabs.com/resources/pricing.md)
+
+## Integrations (Apps)
+
+Violet connects the hardware engineering software stack — PLM/PDM, ERP,
+CAD/CAE, MES, requirements, procurement, and collaboration tools. A partial
+list of the ~150 documented app connectors (many marked "Coming Soon"):
+Teamcenter, Windchill, Arena, Duro, Aras, OpenBOM, Onshape, Fusion, Vault,
+Solidworks PDM, Altium 365/Designer/Enterprise Server, NetSuite, QuickBooks,
+Xero, Ramp, Brex, BILL, Precoro, Procurify, Coupa, Epicor, ION (First
+Resonance), Manufacturo, Heliux, Fulcrum, StartProto, Datum, Cofactr, Octopart,
+PartsBox, InvenTree, Boltline, Silkline, Factor, Jira, Linear, Asana, ClickUp,
+Monday.com, Smartsheet, Trello, Wrike, Confluence, Notion, Nuclino, Slack,
+Microsoft 365/Teams, Google Drive/Sheets, Box, Dropbox, Databricks, Snowflake,
+Jama, DOORS, Codebeamer, Polarion, Valispace, Flow, Cameo, GENESYS, Capella,
+Enterprise Architect, Sedaro, SimScale, Simulink, MATLAB, Julia, Python,
+Lucidchart, Puzzle, Epsilon3, Greenhouse, TestRail, Xray, and more.
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.violetlabs.com/getting-started/violet-documentation.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

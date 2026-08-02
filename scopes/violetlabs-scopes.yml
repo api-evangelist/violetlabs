@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://app.violetlabs.com/.well-known/oauth-authorization-server
+docs: https://docs.violetlabs.com/ai/mcp
+description: >-
+  OAuth 2.0 scopes advertised by the Violet Labs authorization server. The
+  server (app.violetlabs.com) publishes a single scope, `mcp`, used to authorize
+  the hosted Model Context Protocol server against a selected workspace. The
+  REST Explore API itself is authorized by API key rather than OAuth scopes.
+schemes:
+- name: oauth2
+  source: well-known/violetlabs-oauth-authorization-server.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://app.violetlabs.com/api/oauth/authorize
+    tokenUrl: https://app.violetlabs.com/api/oauth/token
+    pkce: S256
+  - flow: clientCredentials
+    tokenUrl: https://app.violetlabs.com/api/oauth/token
+scopes:
+- scope: mcp
+  description: >-
+    Authorize the Violet hosted MCP server to access the selected workspace's
+    structured data on the user's behalf.
+  flows: [authorizationCode, clientCredentials]
+  sources: [well-known/violetlabs-oauth-authorization-server.json]

@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://changelog.violetlabs.com/changelog
+docs: https://changelog.violetlabs.com/changelog
+description: >-
+  Structured capture of the Violet Labs product changelog. Releases are named by
+  calendar date in a YYYY.MM.DD scheme and posted with a publish date; entries
+  are largely integration and workflow enhancements. This records the recent
+  window; the live changelog is the source of truth.
+versioning:
+  scheme: calendar (YYYY.MM.DD release identifiers)
+  detail: lifecycle/violetlabs-lifecycle.yml
+entries:
+- version: '2026.06.22'
+  date: '2026-06-19'
+  latest: true
+  highlights:
+  - NetSuite assembly builds support
+  - Manufacturo integration speed improvements
+  - Arena revision attributes
+  - Conflict detection workflows added
+- version: '2026.06.15'
+  date: '2026-06-02'
+  highlights:
+  - ION custom attributes support expanded
+  - NetSuite work order fetches enhanced with status and quantity fields
+- version: '2026.06.08'
+  date: '2026-05-27'
+  highlights:
+  - Violet Agent now accessible in all tenants
+  - New PartsBox and Greenhouse integrations
+- version: '2026.06.01'
+  date: '2026-05-27'
+  highlights:
+  - Arena categorization improvements
+  - Broader BOM filtering options for parts syncing
+- version: '2026.05.18'
+  date: '2026-05-12'
+  highlights:
+  - Notifications to users for sync workflows via email or in-app (success/failure)

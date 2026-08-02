@@ -1,0 +1,64 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  OAuth/OIDC discovery at app.violetlabs.com/.well-known/*, the API endpoint
+  reference (docs.violetlabs.com/features/api/endpoints), and the Violet Labs
+  security & compliance pages
+  (docs.violetlabs.com/resources/security-and-compliance/*, trust.violetlabs.com).
+description: >-
+  Cross-cutting standards and compliance posture Violet Labs conforms to, from
+  its published discovery documents, API conventions, and compliance program.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    app.violetlabs.com publishes an OAuth 2.0 authorization server
+    (/.well-known/oauth-authorization-server) with authorization_code,
+    refresh_token, and client_credentials grants; used by the hosted MCP server.
+- id: oidc-discovery
+  conforms: true
+  evidence: >-
+    /.well-known/openid-configuration is served with issuer, authorization,
+    token, and registration endpoints.
+- id: oauth2-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported = [S256] in the discovery documents.
+- id: rfc7591-dynamic-client-registration
+  conforms: true
+  evidence: registration_endpoint (/api/oauth/register) advertised in discovery.
+- id: rfc8414-oauth-authorization-server-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns RFC 8414 metadata.
+- id: api-key-auth
+  conforms: true
+  evidence: REST Explore API authenticated via x-api-key header.
+- id: pagination
+  conforms: true
+  evidence: >-
+    POST /api/explore returns a PageDto with page/limit request params and
+    meta/links pagination fields.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No documented application/problem+json error envelope.
+- id: soc2
+  conforms: true
+  evidence: >-
+    SOC 2 certification documented
+    (docs.violetlabs.com/resources/security-and-compliance/soc-2-certification;
+    trust.violetlabs.com).
+- id: itar-ear
+  conforms: true
+  evidence: >-
+    ITAR/EAR compliance documented
+    (docs.violetlabs.com/resources/security-and-compliance/itar-ear-compliance);
+    VioletGov and on-prem deployment options.
+- id: nist-cmmc-fedramp
+  conforms: true
+  evidence: >-
+    NIST/CMMC/FedRAMP alignment documented
+    (docs.violetlabs.com/resources/security-and-compliance/nist-cmmc-fedramp-compliance).
+compliance_program:
+  published: true
+  trust_center: https://trust.violetlabs.com/
+  certifications: [SOC 2, ITAR/EAR, NIST 800-171/CMMC/FedRAMP alignment]
+  detail: security/violetlabs-trust-center.yml

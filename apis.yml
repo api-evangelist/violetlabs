@@ -1,7 +1,17 @@
 aid: violetlabs
 name: Violetlabs
-description: Violetlabs is a company surfaced as a portfolio company of felicis and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Violet Labs is the connective tissue for hardware engineering data. Its
+  cloud platform gives hardware, systems, and manufacturing teams a single
+  workspace that harmonizes the software stack — PLM, ERP, CAD, PDM, MES,
+  requirements, and procurement tools — through no-code integrations, data-sync
+  workflows, parameters, native Python/Julia/MATLAB scripts, requirements
+  management, reporting, and dashboards. Violet exposes a REST API (the Explore
+  endpoint) authenticated with an x-api-key header, an OAuth 2.0 authorization
+  server with dynamic client registration for its hosted Model Context Protocol
+  (MCP) server, and an AI chat/agent surface. The platform is ITAR/EAR-aware,
+  SOC 2 certified, and NIST/CMMC/FedRAMP-aligned, with on-premises and VioletGov
+  deployment options for defense and regulated hardware programs.
 url: https://raw.githubusercontent.com/api-evangelist/violetlabs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +19,122 @@ x-backed-by:
 - felicis
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://cdn.prod.website-files.com/681bdb35ddf11baf679e267f/689288c5b6e253d5a804b2cf_Share%20Image.webp
 tags:
 - Company
-apis: []
+- Hardware
+- Engineering
+- Manufacturing
+- PLM
+- ERP
+- Data Integration
+- Requirements Management
+- Aerospace
+- Defense
+- MCP
+- Systems Engineering
+apis:
+- name: Violet Explore API
+  description: >-
+    REST API for programmatic access to your Violet data. The Explore endpoint
+    (POST /api/explore) accepts a rich query payload (keyword, filterModel,
+    sort, grouping, pagination) and returns a paginated PageDto of entities.
+    Authenticated with an x-api-key header. The API is served per-tenant at
+    https://{tenant}.violetlabs.com/api (or {tenant}.violetgov.com/api for
+    VioletGov), with .staging. subdomain variants for staging.
+  humanURL: https://docs.violetlabs.com/features/api
+  baseURL: https://app.violetlabs.com/api
+  properties:
+  - type: Documentation
+    url: https://docs.violetlabs.com/features/api
+  - type: APIReference
+    url: https://docs.violetlabs.com/features/api/endpoints
+  - type: GettingStarted
+    url: https://docs.violetlabs.com/features/api/generate-an-api-key
+  - type: Authentication
+    url: authentication/violetlabs-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/violetlabs-trust-center.yml
+- type: DomainSecurity
+  url: security/violetlabs-domain-security.yml
 - type: Website
   url: https://violetlabs.com
+- type: DeveloperPortal
+  url: https://docs.violetlabs.com
+- type: Documentation
+  url: https://docs.violetlabs.com
+- type: APIReference
+  url: https://docs.violetlabs.com/features/api/endpoints
+- type: GettingStarted
+  url: https://docs.violetlabs.com/features/api/generate-an-api-key
+- type: SignUp
+  url: https://app.violetlabs.com/login
+- type: Login
+  url: https://app.violetlabs.com/login
+- type: Blog
+  url: https://www.violetlabs.com/blog
+- type: Pricing
+  url: https://docs.violetlabs.com/resources/pricing
+- type: TermsOfService
+  url: https://www.violetlabs.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.violetlabs.com/privacy-policy
+- type: Support
+  url: https://www.violetlabs.com/contact-us
+- type: StatusPage
+  url: https://violetlabs.statuspage.io/
+- type: ChangeLog
+  url: https://changelog.violetlabs.com/changelog
+- type: Compliance
+  url: https://trust.violetlabs.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/violetlabsinc/
+- type: Careers
+  url: https://jobs.violetlabs.com/
+- type: MCPServer
+  url: mcp/violetlabs-mcp.yml
+- type: Authentication
+  url: authentication/violetlabs-authentication.yml
+- type: OAuthScopes
+  url: scopes/violetlabs-scopes.yml
+- type: Conventions
+  url: conventions/violetlabs-conventions.yml
+- type: ChangeLog
+  name: Violet Labs Changelog (artifact)
+  url: changelog/violetlabs-changelog.yml
+- type: Lifecycle
+  url: lifecycle/violetlabs-lifecycle.yml
+- type: Conformance
+  url: conformance/violetlabs-conformance.yml
+- type: Sandbox
+  url: sandbox/violetlabs-sandbox.yml
+- type: WellKnown
+  url: well-known/violetlabs-well-known.yml
+- type: LLMsTxt
+  url: llms/violetlabs-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1

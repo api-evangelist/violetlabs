@@ -1,0 +1,61 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://docs.violetlabs.com/features/api/endpoints,
+  https://docs.violetlabs.com/features/api/generate-an-api-key
+description: >-
+  Cross-cutting request/response conventions for the Violet Explore REST API.
+  The API is a compact, query-oriented surface: a single POST /api/explore
+  endpoint accepts a rich JSON query payload and returns paginated results.
+  These are the developer-experience conventions the endpoint reference implies.
+base_url: https://{tenant}.violetlabs.com/api
+base_url_notes: >-
+  Served per tenant. VioletGov customers use https://{tenant}.violetgov.com/api;
+  staging environments use a .staging. subdomain variant.
+api_style: REST over HTTPS, JSON request and response bodies
+authentication:
+  scheme: API key in the x-api-key header
+  detail: authentication/violetlabs-authentication.yml
+  docs: https://docs.violetlabs.com/features/api/generate-an-api-key
+query_model:
+  endpoint: POST /api/explore
+  request_dto: ExploreRequestDto
+  fields:
+    keyword: string — full-text search filter
+    rowGroupCols: array — grouping configuration
+    filterModel: object — per-column filters with AND/OR operators
+    sort: object — Elasticsearch-style sort configuration
+    includeParameters: boolean
+    includeSubEntities: boolean
+    includeSchemas: boolean
+  notes: >-
+    POST is used (rather than GET) so complex, structured queries can be carried
+    in the request body.
+pagination:
+  style: page-number
+  request_params:
+    page: number, min 1
+    limit: number, min 1 — items per page
+  response_shape: PageDto
+  response_fields:
+    items: array of entity results
+    meta: object — itemCount, totalItems, itemsPerPage, totalPages, currentPage
+    links: object — first, previous, next, last URLs
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header is documented; the primary operation is a
+    read/query (POST /api/explore) rather than a resource-mutating write.
+versioning:
+  scheme: unversioned path (/api); platform releases are dated (YYYY.MM.DD)
+  changelog: changelog/violetlabs-changelog.yml
+error_envelope:
+  notes: >-
+    The endpoint reference does not publish a documented error envelope or error
+    code registry; not captured to avoid fabrication.
+rate_limiting:
+  notes: No published rate-limit headers or quotas found in the API documentation.
+cross_links:
+  authentication: authentication/violetlabs-authentication.yml
+  lifecycle: lifecycle/violetlabs-lifecycle.yml
+  changelog: changelog/violetlabs-changelog.yml

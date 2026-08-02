@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for the Violet Labs
+  hosts in apis.yml. app.violetlabs.com publishes OAuth 2.0 / OIDC discovery
+  documents (used by the hosted MCP server's OAuth flow); the API and docs hosts
+  return 404 for /.well-known/security.txt. Status is the HTTP code observed at
+  fetch time; documents returning a real payload were saved verbatim.
+hosts:
+- host: https://app.violetlabs.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    type: application/json
+    file: violetlabs-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    type: application/json
+    file: violetlabs-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://docs.violetlabs.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://www.violetlabs.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+notes: >-
+  The OAuth authorization server advertises PKCE (S256), dynamic client
+  registration (RFC 7591 registration_endpoint), the authorization_code,
+  refresh_token, and client_credentials grants, and a single scope: mcp. These
+  back the Violet hosted MCP server OAuth login.

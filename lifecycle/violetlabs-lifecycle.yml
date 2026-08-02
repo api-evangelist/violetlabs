@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://changelog.violetlabs.com/changelog, https://violetlabs.statuspage.io,
+  https://docs.violetlabs.com/features/api/endpoints
+description: >-
+  Lifecycle posture for the Violet Labs platform and Explore API: how it is
+  versioned, where releases and status are published. Violet ships dated
+  platform releases (YYYY.MM.DD) rather than a versioned API path; no formal
+  deprecation policy with RFC 8594 Sunset/Deprecation headers is published.
+versioning:
+  scheme: calendar-dated platform releases (YYYY.MM.DD)
+  api_path: unversioned (/api)
+  changelog: https://changelog.violetlabs.com/changelog
+  detail: changelog/violetlabs-changelog.yml
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No public deprecation policy or Sunset/Deprecation header contract found in
+    the documentation.
+sla:
+  url: null
+  public_uptime_target: null
+  notes: >-
+    No public numeric uptime SLA published; enterprise/on-prem/VioletGov
+    deployments handle availability commitments by agreement.
+status_page: https://violetlabs.statuspage.io/
+deployment_options:
+  - Multi-tenant cloud (violetlabs.com)
+  - VioletGov (violetgov.com) for ITAR/regulated tenants
+  - On-premises (AWS, Azure, Nutanix AHV)

@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+source: https://www.violetlabs.com/security
+url: https://www.violetlabs.com/security
+certifications:
+- SOC 2
+- HIPAA
+- FIPS 140
+evidence:
+- source: https://www.violetlabs.com/security
+  keywords:
+  - soc2
+  - hipaa
+  - trust center

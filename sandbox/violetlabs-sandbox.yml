@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.violetlabs.com/features/api/endpoints
+description: >-
+  Test-vs-production separation for the Violet Labs platform. Violet runs
+  dedicated staging environments addressed by a .staging. subdomain variant of
+  the tenant host, alongside the VioletGov environment for regulated tenants.
+  No published magic test values, test cards, or fixture tooling were found
+  (Violet is not a payments provider); only the environment separation is
+  documented.
+environments:
+- name: production
+  api_base: https://{tenant}.violetlabs.com/api
+  app: https://app.violetlabs.com
+- name: production-gov
+  api_base: https://{tenant}.violetgov.com/api
+  app: https://app.violetgov.com
+  notes: VioletGov environment for ITAR/regulated tenants.
+- name: staging
+  api_base: https://{tenant}.staging.violetlabs.com/api
+  notes: >-
+    Staging environments use a .staging. subdomain variant of the tenant host
+    (per the API endpoint documentation).
+test_values:
+  notes: >-
+    No published test-data credentials, magic identifiers, or fixtures found;
+    not fabricated.
