@@ -2,23 +2,21 @@ generated: '2026-07-21'
 method: searched
 status: published
 source: https://docs.violetlabs.com/ai/mcp
-description: >-
-  Violet Labs operates an official hosted (remote) Model Context Protocol server
-  that gives agents secure access to a workspace's structured Violet data — to
-  answer questions, build insights, and assemble dashboards. Two environments
-  are published: the standard cloud server and a VioletGov server for
-  ITAR/regulated tenants. Authentication is via OAuth (recommended: authenticate
-  with existing Violet credentials and select a workspace) or an API key passed
-  in the X-API-Key header (for clients like Cursor and Windsurf). The OAuth flow
-  is backed by the app.violetlabs.com authorization server (PKCE S256, dynamic
-  client registration, scope: mcp) — see well-known/violetlabs-oauth-authorization-server.json.
+description: 'Violet Labs operates an official hosted (remote) Model Context Protocol server that gives
+  agents secure access to a workspace''s structured Violet data — to answer questions, build insights,
+  and assemble dashboards. Two environments are published: the standard cloud server and a VioletGov server
+  for ITAR/regulated tenants. Authentication is via OAuth (recommended: authenticate with existing Violet
+  credentials and select a workspace) or an API key passed in the X-API-Key header (for clients like Cursor
+  and Windsurf). The OAuth flow is backed by the app.violetlabs.com authorization server (PKCE S256, dynamic
+  client registration, scope: mcp) — see well-known/violetlabs-oauth-authorization-server.json.'
 server:
   name: violet
   transport: http
   url: https://mcp.violetlabs.com/mcp
   auth: oauth2
   authorization_server: https://app.violetlabs.com
-  scopes: [mcp]
+  scopes:
+  - mcp
   api_key_header: X-API-Key
 environments:
 - name: standard
@@ -28,9 +26,14 @@ environments:
 docs:
   security_architecture: https://docs.violetlabs.com/resources/security-and-compliance/mcp-security-and-architecture
 tools:
-  note: >-
-    The Violet MCP documentation describes the server as providing secure access
-    to structured Violet data (querying, insights, dashboard building) but does
-    not publish a verbatim named-tool list. No tools are enumerated here to avoid
-    fabrication; the capability surface maps to the Violet Explore API
-    (openapi not published).
+  note: The Violet MCP documentation describes the server as providing secure access to structured Violet
+    data (querying, insights, dashboard building) but does not publish a verbatim named-tool list. No
+    tools are enumerated here to avoid fabrication; the capability surface maps to the Violet Explore
+    API (openapi not published).
+deployment:
+  mode: remote
+  endpoint: https://mcp.violetlabs.com/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
