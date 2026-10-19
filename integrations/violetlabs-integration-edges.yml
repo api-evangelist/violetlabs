@@ -1,0 +1,24 @@
+edges:
+- partner_name: Onshape (own)
+  partner: onshape
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://cad.onshape.com/appstore/apps/Project%20%26%20Data%20Management/68e58a98da73921b0d3c0543
+  mirror_of: onshape/integrations/onshape-integration-edges.yml
+  apps:
+  - Violet
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  category: Project & Data Management
+generated: '2026-10-19'
+method: searched
+source:
+- https://cad.onshape.com/appstore
+checked:
+- https://cad.onshape.com/appstore
